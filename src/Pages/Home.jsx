@@ -12,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     const loadPostres = async () => {
       const data = await fetchHomePostres();
-      console.log("Postres destacados obtenidos de Supabase:", data);
       setHomePostres(data);
     };
     loadPostres();

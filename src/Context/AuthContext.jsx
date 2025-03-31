@@ -21,7 +21,6 @@ export const AuthProvider = ({ children }) => {
       password,
     });
     if (error) {
-      console.error("Error de autenticación:", error.message);
       throw error;
     }
     setAdmin(data.user);

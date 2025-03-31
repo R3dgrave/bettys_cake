@@ -73,7 +73,6 @@ const Menu = () => {
                 Array.isArray(postre.imagen_url) && postre.imagen_url.length > 0
                   ? postre.imagen_url.map((url) => `${SUPABASE_URL}/${url}`)
                   : ["/placeholder-image.jpg"];
-              console.log(images);
               return <PostreCard key={postre.id} {...postre} images={images} />;
             })
           ) : (

@@ -121,10 +121,7 @@ const Admin = () => {
       .from("postres-images")
       .list("public", { search: fileName });
 
-    if (error) {
-      console.error("Error al verificar si el archivo existe", error);
-      return false;
-    }
+    if (error) throw error;
     return data.length > 0;
   };
 

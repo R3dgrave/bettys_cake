@@ -9,7 +9,7 @@ export const PostresProvider = ({ children }) => {
 
   const fetchPostres = async () => {
     const { data, error } = await supabase.from("postres").select("*");
-    if (error) console.error("Error al obtener postres", error);
+    if (error) throw error;
     else setPostres(data);
   };
 
@@ -18,7 +18,7 @@ export const PostresProvider = ({ children }) => {
       .from("postres")
       .insert([{ ...postre, postre_destacado: false }])
       .select();
-    if (error) console.error("Error al agregar postre", error);
+    if (error) throw error;
     else setPostres([...postres, ...data]);
   };
 
@@ -30,7 +30,7 @@ export const PostresProvider = ({ children }) => {
       .select();
 
     if (error) {
-      console.error("Error al actualizar postre", error);
+      
     } else {
       setPostres(
         postres.map((postre) =>
@@ -46,7 +46,7 @@ export const PostresProvider = ({ children }) => {
       .update({ postre_destacado: !estadoActual })
       .eq("id", id);
     if (error) {
-      console.error("Error al actualizar el estado de destacado", error);
+      throw error;
     } else {
       setPostres(
         postres.map((postre) =>
@@ -58,7 +58,7 @@ export const PostresProvider = ({ children }) => {
 
   const deletePostre = async (id) => {
     const { error } = await supabase.from("postres").delete().eq("id", id);
-    if (error) console.error("Error al eliminar postre", error);
+    if (error) throw error;
     else setPostres(postres.filter((p) => p.id !== id));
   };
 
@@ -68,11 +68,8 @@ export const PostresProvider = ({ children }) => {
       .select("*")
       .eq("postre_destacado", true);
   
-    if (error) {
-      console.error("Error al obtener postres destacados:", error);
-      return [];
-    }
-  
+    if (error) throw error;
+
     return data;
   };
 
