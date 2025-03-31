@@ -19,11 +19,11 @@ const Home = () => {
 
     const updateImage = () => {
       if (window.innerWidth < 640) {
-        setImageSrc("/src/assets/banner-mobile.png");
+        setImageSrc("/banner-mobile.png");
       } else if (window.innerWidth < 1024) {
-        setImageSrc("/src/assets/banner-mobile.png");
+        setImageSrc("/banner-desktop.png");
       } else {
-        setImageSrc("/src/assets/banner-desktop.png");
+        setImageSrc("/banner-desktop.png");
       }
     };
 
@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   // Responsive Image
-  const [imageSrc, setImageSrc] = useState("/src/assets/banner-desktop.png");
+  const [imageSrc, setImageSrc] = useState("/banner-desktop.png");
 
   const SUPABASE_URL = import.meta.env.VITE_SUPABASE_STORAGE_URL;
   return (
@@ -74,7 +74,7 @@ const Home = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
                 <img
-                  src="/src/assets/hero2.webp"
+                  src="/hero2.webp"
                   alt="Chef Pastelera"
                   className="rounded-lg filter drop-shadow-lg"
                 />
