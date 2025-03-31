@@ -3,6 +3,7 @@ import { usePostres } from "../Context/PostresContext";
 import { Star, Clock, Truck, Phone, Heart } from "lucide-react";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import PostreCard from "../Components/PostreCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { fetchHomePostres } = usePostres();
@@ -202,12 +203,12 @@ const Home = () => {
             </div>
           )}
           <div className="flex justify-center mt-8">
-            <a
-              href="/menu"
+            <Link
+              to="/menu"
               className="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-colors"
             >
               Ver Menu
-            </a>
+            </Link>
           </div>
         </div>
       </section>
