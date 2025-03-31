@@ -203,7 +203,7 @@ const Home = () => {
           )}
           <div className="flex justify-center mt-8">
             <a
-              href="#featured"
+              href="/menu"
               className="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-colors"
             >
               Ver Menu
