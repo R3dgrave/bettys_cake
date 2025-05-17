@@ -508,6 +508,7 @@ const Admin = () => {
                         >
                           <img
                             src={preview.preview}
+                            aria-label={`Preview ${index + 1}`}
                             alt={`Preview ${index + 1}`}
                             className="w-full h-32 object-cover rounded-md"
                           />
@@ -622,6 +623,7 @@ const Admin = () => {
                     <SwiperSlide key={index}>
                       <img
                         src={`${SUPABASE_URL}/${imageUrl}`}
+                        aria-label={`${postre.nombre} - Imagen ${index + 1}`}
                         alt={postre.nombre}
                         className="aspect-[16/9] w-full object-cover"
                       />

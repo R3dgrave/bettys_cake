@@ -8,7 +8,12 @@ const Footer = () => {
         <div className="md:flex md:justify-between md:gap-x-6 lg:gap-x-0">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center gap-2">
-              <img src="/logo.png" alt="Bettys' Cakes" className="w-10 h-10" />
+              <img
+                src="/logo.png"
+                aria-label="Bettys' Cakes"
+                alt="Bettys' Cakes"
+                className="w-10 h-10"
+              />
               <span className="self-center text-2xl font-semibold whitespace-normal break-words text-pink-600">
                 Bettys' Cakes
               </span>
@@ -60,15 +65,27 @@ const Footer = () => {
             © 2024 Bettys' Cakes™. Todos los derechos reservados.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="Facebook"
+            >
               <FaTiktok size={24} />
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="Instagram"
+            >
               <FaInstagram size={24} />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="Twitter"
+            >
               <FaFacebook size={24} />
               <span className="sr-only">Twitter</span>
             </a>

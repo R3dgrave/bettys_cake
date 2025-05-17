@@ -48,6 +48,7 @@ const MenuDetails = () => {
                   <SwiperSlide key={index}>
                     <img
                       src={imagen}
+                      aria-label={`${postre.nombre} - Imagen ${index + 1}`}
                       alt={`${postre.nombre} - Imagen ${index + 1}`}
                       className="w-full h-full object-cover"
                     />

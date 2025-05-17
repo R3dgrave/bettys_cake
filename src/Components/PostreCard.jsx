@@ -29,6 +29,7 @@ const PostreCard = ({ id, nombre, descripcion, categoria, images= [] }) => {
                 <SwiperSlide key={index} className="h-full">
                   <img
                     src={imagen}
+                    aria-label={`${nombre} - Imagen ${index + 1}`}
                     alt={`${nombre} - Imagen ${index + 1}`}
                     className="absolute inset-0 w-full h-full object-cover"
                   />

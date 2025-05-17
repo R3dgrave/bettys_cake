@@ -44,6 +44,7 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={imageSrc}
+            aria-label="Bettys Cakes Background"
             alt="Bettys Cakes Background"
             className="w-full h-full object-cover"
           />
@@ -75,6 +76,7 @@ const Home = () => {
               <div className="md:w-1/2">
                 <img
                   src="/hero2.webp"
+                  aria-label="Chef Pastelera"
                   alt="Chef Pastelera"
                   className="rounded-lg filter drop-shadow-lg"
                 />

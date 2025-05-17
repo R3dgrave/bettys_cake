@@ -10,7 +10,12 @@ const Navbar = () => {
     <nav className="bg-pink-50 fixed w-full z-20 top-0 start-0 border-b border-pink-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Bettys' Cakes" className="w-8 h-8" />
+          <img
+            src="/logo.png"
+            aria-label="Bettys' Cakes"
+            alt="Bettys' Cakes"
+            className="w-8 h-8"
+          />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-pink-600">
             Bettys' Cakes
           </span>
@@ -33,6 +38,7 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="block py-2 px-3 text-pink-600 rounded hover:bg-pink-100 md:hover:bg-transparent md:hover:text-pink-700 md:p-0"
+                aria-label="Inicio"
               >
                 Inicio
               </Link>
@@ -41,6 +47,7 @@ const Navbar = () => {
               <Link
                 to="/menu"
                 className="block py-2 px-3 text-pink-600 rounded hover:bg-pink-100 md:hover:bg-transparent md:hover:text-pink-700 md:p-0"
+                aria-label="Menú"
               >
                 Menú
               </Link>
@@ -49,21 +56,34 @@ const Navbar = () => {
               <Link
                 to="/contacto"
                 className="block py-2 px-3 text-pink-600 rounded hover:bg-pink-100 md:hover:bg-transparent md:hover:text-pink-700 md:p-0"
+                aria-label="Contacto"
               >
                 Contacto
               </Link>
             </li>
           </ul>
           <div className="flex justify-center space-x-5 mt-4 md:hidden">
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="TikTok"
+            >
               <FaTiktok size={24} />
               <span className="sr-only">TikTok</span>
             </a>
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="Instagram"
+            >
               <FaInstagram size={24} />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a
+              href="#"
+              className="text-pink-600 hover:text-pink-700"
+              aria-label="Facebook"
+            >
               <FaFacebook size={24} />
               <span className="sr-only">Facebook</span>
             </a>
@@ -71,17 +91,29 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex mt-4 space-x-5 sm:mt-0">
-          <a href="#" className="text-pink-600 hover:text-pink-700">
+          <a
+            href="#"
+            className="text-pink-600 hover:text-pink-700"
+            aria-label="TikTok"
+          >
             <FaTiktok size={24} />
-            <span className="sr-only">Facebook</span>
+            <span className="sr-only">TikTok</span>
           </a>
-          <a href="#" className="text-pink-600 hover:text-pink-700">
+          <a
+            href="#"
+            className="text-pink-600 hover:text-pink-700"
+            aria-label="Instagram"
+          >
             <FaInstagram size={24} />
             <span className="sr-only">Instagram</span>
           </a>
-          <a href="#" className="text-pink-600 hover:text-pink-700">
+          <a
+            href="#"
+            className="text-pink-600 hover:text-pink-700"
+            aria-label="Facebook"
+          >
             <FaFacebook size={24} />
-            <span className="sr-only">Twitter</span>
+            <span className="sr-only">Facebook</span>
           </a>
         </div>
       </div>
